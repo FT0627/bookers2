@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
   def index
-    
+    @users = User.all
+    @new_book = Book.new
   end
 
   def show
